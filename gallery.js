@@ -67,7 +67,7 @@ const images = [
   const galleryContainer = document.querySelector('.gallery');
   images.forEach(({ preview, original, description }) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('gallery__item');
+    listItem.classList.add('gallery-item');
     listItem.innerHTML = `
     <a class="gallery-link" href="${original}">
       <img
@@ -82,9 +82,9 @@ const images = [
   galleryContainer.appendChild(listItem);
 });
 
-
+/* MODAL OLUŞTURMA */
 galleryContainer.addEventListener('click', (event) => {
-    event.preventDefault(); // Bağlantı tıklamasının varsayılan davranışını engelle
+    event.preventDefault();
   
     const imageSrc = event.target.dataset.source;
   
